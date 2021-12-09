@@ -7,14 +7,13 @@
     <meta name="description"
         content="Play a fun game of Rock Paper Scissors Lizard Spock. Win against the computer by being the first to reach 7 points.">
     <meta name="keywords" content="Rock, Paper, Scissors, Lizard, Spock, Game, JavaScript ">
-    <meta name="author" content="BellSmith">
+    <meta name="author" content="Bell">
 
     <!-- Font Awesome and Google Fonts -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <!-- <link href="https://fonts.googleapis.com/css2?family=Festive&display=swap" rel="stylesheet"> -->
-    <link href="https://fonts.googleapis.com/css2?family=Festive&family=Mountains+of+Christmas:wght@700&display=swap"
-        rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Festive&family=Mountains+of+Christmas:wght@700&display=swap" rel="stylesheet">
 
     <link rel="stylesheet" href="assets/css/style.css">
     <title></title>
@@ -22,7 +21,9 @@
 
 <body>
 
-    <div class="background" id="background" alt="christmas-trees"></div>
+    <div class="background">
+        <div id="background" alt="christmas-trees"></div>
+    </div>
 
     <div class="foreground">
 
@@ -30,7 +31,7 @@
             Xmas Rock-Paper-Scissors-Lizard-Spock Game
         </h1>
 
-        <div class="start-btn">
+        <div class="rules-btn">
             <button class="btn" id="myBtn">Rules of Play</button>
         </div>
 
@@ -69,8 +70,8 @@
                 <div class="winner-modal" style=>
                     <div class="modal-content">
                         <span class="close"><i class="fas fa-times-circle"></i></span>
-                        <h3 class="modal-answer"></h3>
-                        <p class="modal-display"></p>
+                        <h3 class="modal-header"></h3>
+                        <p class="modal-result"></p>
                     </div>
                 </div>
 
@@ -82,7 +83,7 @@
 
         <div class="win" style="display-block">
             <div class="round-results">
-                <span id="round-answer">Computer Wins the Round!</span>
+                <span id="round-text">Computer Wins the Round!</span>
             </div>
             <p>Winning Combinations are;
                 <br>
@@ -105,18 +106,14 @@
                 <br>
             </p>
         </div>
-
-        <!-- <button class="btn" id="myBtn">Rules of Play</button> -->
-        <!-- <i class="fas fa-times-circle"></i> -->
-
-        <!-- The Modal -->
+        
         <div id="myModal" class="modal">
             <div class="modal-content">
                 <span class="close"></span>
                 <h1>How to Play the Game</h1>
                 <p>Choose the shape of hand that you want to play against the Computer. Click on the image you want
                     to to start the game.
-                    Remember choose wisely it is best of 3 go's for you to beat the Computer.</p>
+                    Remember choose wisely it is best of '7' go's for you to beat the Computer.</p>
             </div>
         </div>
 
@@ -129,46 +126,49 @@
 
 </html>
 
+ <!-- https://pixabay.com/music/search/genre/christmas/ -->
 
-<!-- https://pixabay.com/music/search/genre/christmas/ -->
 
-<!-- <div class="music-btn">
+
+    <!-- <div class="music-btn">
         <button class="btn" id="audio">Play Music</button>
         <i class="fas fa-holly-berry" id="audio" >Play Music</i>
     </div> -->
-<!-- <button id="start" class="btn">Make this reset button work</button> -->
+    <!-- <button id="start" class="btn">Make this reset button work</button> -->
 
-<!-- <i id="audio" class="fas fa-holly-berry" style="color:darkgreen;">
+    <!-- <i id="audio" class="fas fa-holly-berry" style="color:darkgreen;">
         <source src="assets/music/christmas-magic-night-11648.mp3" type="audio/mpeg"></i> -->
 
 
-<audio controls loop>
-    <source src="assets/music/christmas-magic-night-11648.mp3" type="audio/mpeg">
-</audio>
-
-<i id="audio" class="fas fa-holly-berry" style="color:darkgreen;">
-    <source src="assets/music/christmas-magic-night-11648.mp3" type="audio/mpeg"></i>
-
-
-<audio id="myAudio">
-    <source src="assets/music/christmas-magic-night-11648.mp3" type="audio/mpeg">Your browser does not support the audio
-    element.
-</audio>
-
-<button onclick="playAudio" type="button">Play</button>
-<button onclick="pauseAudio" type="button">Pause</button>
-
-<script>
-    let music = document.getElementById("myAudio");
-
-    function playAudio() {
-        music.play();
-    }
-
-    function pauseAudio() {
-        music.pause();
-    }
-</script>
-
-
-<!-- <button onclick='play'>Play Xmas</button> -->
+        <audio controls loop>
+            <source src="assets/music/christmas-magic-night-11648.mp3" type="audio/mpeg">
+        </audio>
+    
+        <i id="audio" class="fas fa-holly-berry" style="color:darkgreen;">
+            <source src="assets/music/christmas-magic-night-11648.mp3" type="audio/mpeg"></i>
+    
+    
+        <audio id="myAudio">
+            <source src="assets/music/christmas-magic-night-11648.mp3" type="audio/mpeg">Your browser does not support the audio element.
+        </audio>
+    
+        <button onclick="playAudio" type="button">Play</button>
+        <button onclick="pauseAudio" type="button">Pause</button>
+    
+        <script>
+            let music = document.getElementById("myAudio"); 
+            
+            function playAudio() { 
+              music.play(); 
+            } 
+            
+            function pauseAudio() { 
+              music.pause(); 
+            } 
+        </script>
+    
+    
+        <!-- <button onclick='play'>Play Xmas</button> -->
+    
+    
+    
